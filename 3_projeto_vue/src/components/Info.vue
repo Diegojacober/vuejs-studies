@@ -9,17 +9,23 @@
             <li>php</li>
             <li>python</li>
         </ul>
+        <p>Para acessar o portfolio acesse <a v-bind:href="link">aqui</a></p>
+        <Picture/>
     </div>
 </template>
 
 <script>
+import Picture from './Picture.vue';
+
 export default {
     name: 'Info',
     data() {
         return {
             is_working: true,
-            show_email: true
-        }
-    }
+            show_email: true,
+            link: "https://github.com/diegojacober"
+        };
+    },
+    components: { Picture }
 }
 </script>
