@@ -9,6 +9,9 @@
             <li>php</li>
             <li>python</li>
         </ul>
+        <div>
+            <button @click="showEmail"> {{ show_email ? 'Ocultar e-mail' : 'Mostrar e-mail' }}</button>
+        </div>
         <p>Para acessar o portfolio acesse <a v-bind:href="link">aqui</a></p>
         <Picture/>
     </div>
@@ -22,10 +25,15 @@ export default {
     data() {
         return {
             is_working: true,
-            show_email: true,
+            show_email: false,
             link: "https://github.com/diegojacober"
         };
     },
-    components: { Picture }
+    components: { Picture },
+    methods: {
+        showEmail() {
+            this.show_email = !this.show_email
+        }
+    }
 }
 </script>
