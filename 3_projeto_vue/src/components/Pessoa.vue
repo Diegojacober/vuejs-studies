@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2 @click="nomeAleatorio($event), printarNome(name, $event)">Esta é a descrição da pessoa: {{ name }}</h2>
-        <Info/>
+        <Info :email="email" :is_working="true"/>
     </div>
 </template>
 
@@ -12,7 +12,8 @@ import Info from './Info.vue';
     name: 'LifyCycle',
     data() {
         return {
-            name: 'Diego'
+            name: 'Diego',
+            email: "diegoalencarj04@gmail.com"
         };
     },
     components: { Info },

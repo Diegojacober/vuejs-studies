@@ -2,7 +2,7 @@
     <div>
         <p v-if="is_working">Estou trabalhando no momento.</p>
         <p v-else>Não estou trabalhando no momento.</p>
-        <p v-show="show_email">diegoalencar.jacober@gmail.com</p>
+        <p v-show="show_email">{{ email }}</p>
         <p>Utilizo as seguintes tecnologias:</p>
         <ul v-for="tec, i in tecnologies" v-bind:key="i">
             <li >{{ tec }}</li>
@@ -23,9 +23,12 @@ import Picture from './Picture.vue';
 
 export default {
     name: 'Info',
+    props: {
+        email: String,
+        is_working: Boolean
+    },
     data() {
         return {
-            is_working: true,
             show_email: false,
             link: "https://github.com/diegojacober",
             tecnologies: [
