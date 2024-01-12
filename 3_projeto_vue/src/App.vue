@@ -4,6 +4,10 @@
   <LifeCycle />
   <Pessoa />
   <Form />
+  <Reutilizacao/>
+  <Reutilizacao/>
+  <Reutilizacao/>
+  <Reutilizacao/>
 </template>
 
 <script>
@@ -12,6 +16,7 @@ import LifeCycle from './components/LifeCycle.vue';
 import Pessoa from './components/Pessoa.vue';
 import Form from './components/Form.vue';
 import Header from './components/Header.vue';
+import Reutilizacao from './components/Reutilizacao.vue';
 
 export default {
   name: 'App',
@@ -20,8 +25,9 @@ export default {
     LifeCycle,
     Pessoa,
     Form,
-    Header
-  }
+    Header,
+    Reutilizacao
+}
 }
 </script>
 
