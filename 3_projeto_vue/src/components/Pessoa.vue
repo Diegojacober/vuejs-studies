@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2 @click="nomeAleatorio">Esta é a descrição da pessoa: {{ name }}</h2>
+        <h2 @click="nomeAleatorio($event), printarNome(name, $event)">Esta é a descrição da pessoa: {{ name }}</h2>
         <Info/>
     </div>
 </template>
@@ -17,9 +17,12 @@ import Info from './Info.vue';
     },
     components: { Info },
     methods: {
-        nomeAleatorio() {
+        nomeAleatorio(e) {
             let nome = ['Diego', 'Pedro', 'João', 'Roberto'];
             this.name = nome[Math.floor(Math.random() * nome.length)]
+        },
+        printarNome(txt, e) {
+            console.log(txt)
         }
     }
 }
