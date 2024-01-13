@@ -10,6 +10,7 @@
   <Reutilizacao/>
 
   <VModel/>
+  <ComputedProperties/>
 </template>
 
 <script>
@@ -20,6 +21,7 @@ import Form from './components/Form.vue';
 import Header from './components/Header.vue';
 import Reutilizacao from './components/Reutilizacao.vue';
 import VModel from './components/VModel.vue';
+import ComputedProperties from './components/ComputedProperties.vue';
 
 export default {
   name: 'App',
@@ -30,7 +32,8 @@ export default {
     Form,
     Header,
     Reutilizacao,
-    VModel
+    VModel,
+    ComputedProperties
 }
 }
 </script>
