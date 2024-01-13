@@ -8,6 +8,8 @@
   <Reutilizacao/>
   <Reutilizacao/>
   <Reutilizacao/>
+
+  <VModel/>
 </template>
 
 <script>
@@ -17,6 +19,7 @@ import Pessoa from './components/Pessoa.vue';
 import Form from './components/Form.vue';
 import Header from './components/Header.vue';
 import Reutilizacao from './components/Reutilizacao.vue';
+import VModel from './components/VModel.vue';
 
 export default {
   name: 'App',
@@ -26,7 +29,8 @@ export default {
     Pessoa,
     Form,
     Header,
-    Reutilizacao
+    Reutilizacao,
+    VModel
 }
 }
 </script>
