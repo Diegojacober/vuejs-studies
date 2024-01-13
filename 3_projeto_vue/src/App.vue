@@ -1,5 +1,11 @@
 <template>
-  <Header />
+  <Header>
+    opa
+    <template v-slot:title>
+      Home
+    </template>
+
+  </Header>
   <PrimeiroComponente />
   <LifeCycle />
   <Pessoa />
