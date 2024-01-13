@@ -12,6 +12,7 @@
   <VModel/>
   <ComputedProperties/>
   <Watch/>
+  <LifeCycle2/>
 </template>
 
 <script>
@@ -24,6 +25,7 @@ import Reutilizacao from './components/Reutilizacao.vue';
 import VModel from './components/VModel.vue';
 import ComputedProperties from './components/ComputedProperties.vue';
 import Watch from './components/Watch.vue';
+import LifeCycle2 from './components/LifeCycle2.vue';
 
 export default {
   name: 'App',
@@ -36,7 +38,8 @@ export default {
     Reutilizacao,
     VModel,
     ComputedProperties,
-    Watch
+    Watch,
+    LifeCycle2
 }
 }
 </script>
