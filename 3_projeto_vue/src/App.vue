@@ -11,6 +11,7 @@
 
   <VModel/>
   <ComputedProperties/>
+  <Watch/>
 </template>
 
 <script>
@@ -22,6 +23,7 @@ import Header from './components/Header.vue';
 import Reutilizacao from './components/Reutilizacao.vue';
 import VModel from './components/VModel.vue';
 import ComputedProperties from './components/ComputedProperties.vue';
+import Watch from './components/Watch.vue';
 
 export default {
   name: 'App',
@@ -33,7 +35,8 @@ export default {
     Header,
     Reutilizacao,
     VModel,
-    ComputedProperties
+    ComputedProperties,
+    Watch
 }
 }
 </script>
