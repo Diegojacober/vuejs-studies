@@ -1,7 +1,7 @@
 <template>
-    <p>Burguer form component</p>
+    <Message :msg="msg" v-show="msg" />
     <div>
-        <form id="burguer-form">
+        <form id="burguer-form" @submit="createBurguer">
             <div class="input-container">
                 <label for="name">Nome do cliente:</label>
                 <input type="text" id="name" name="name" v-model="name" placeholder="Digite seu nome">
@@ -38,6 +38,8 @@
     </div>
 </template>
 <script>
+import Message from './Message.vue';
+
 export default {
     name: "BurguerForm",
     data() {
@@ -49,23 +51,48 @@ export default {
             bread: null,
             meat: null,
             optionals: [],
-            status: "Solicitado",
             msg: null
-        }
+        };
     },
     methods: {
         async getRecipes() {
             const req = await fetch("http://localhost:3000/ingredientes");
             const data = await req.json();
-
             this.breads = data.paes;
             this.meats = data.carnes;
             this.optionalsData = data.opcionais;
+        },
+        async createBurguer(e) {
+            e.preventDefault();
+            const data = {
+                nome: this.name,
+                carne: this.meat,
+                opcionais: Array.from(this.optionals),
+                status: "Solicitado"
+            };
+            const dataJson = JSON.stringify(data);
+            const req = await fetch("http://localhost:3000/burgers", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: dataJson
+            });
+
+            const res = await req.json();
+
+            this.msg = `Pedido Nº ${res.id} realizado com sucesso!`
+
+            setTimeout(() => this.msg = "", 3000)
+
+            this.meat = "";
+            this.bread = "";
+            this.name = "";
+            this.optionals = [];
         }
     },
     mounted() {
         this.getRecipes();
-    }
+    },
+    components: { Message }
 }
 </script>
 <style scoped>
