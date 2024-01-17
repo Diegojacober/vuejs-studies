@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <p>Make Yout BUrguer &copy; 2023</p>
+        <p>Make Yout Burguer &copy; 2023</p>
     </footer>
 </template>
 <script>
