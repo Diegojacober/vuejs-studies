@@ -79,53 +79,11 @@
   ],
   "burgers": [
     {
-      "id": "db6c",
-      "nome": "fe",
-      "carne": "3 Queijos",
-      "opcionais": [
-        "Salame"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "0b42",
-      "nome": "janete alencar",
-      "carne": "3 Queijos",
-      "opcionais": [],
-      "status": "Solicitado"
-    },
-    {
       "id": "1627",
       "nome": "janete alencar",
       "carne": "3 Queijos",
       "opcionais": [],
-      "status": "Solicitado"
-    },
-    {
-      "id": "c6ad",
-      "nome": "teste",
-      "carne": "3 Queijos",
-      "opcionais": [],
-      "status": "Solicitado"
-    },
-    {
-      "id": "2df8",
-      "nome": "teste",
-      "carne": "Parmesão e Orégano",
-      "opcionais": [
-        "Salame"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "827c",
-      "nome": "teste",
-      "carne": "Integral",
-      "opcionais": [
-        "Bacon",
-        "Tomate"
-      ],
-      "status": "Solicitado"
+      "status": "Em produção"
     }
   ]
 }
