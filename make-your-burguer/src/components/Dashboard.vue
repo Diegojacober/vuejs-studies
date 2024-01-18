@@ -11,21 +11,21 @@
             </div>
         </div>
         <div id="burguer-table-rows">
-            <div class="burguer-table-row">
-                <div class="order-number">1</div>
-                <div>João</div>
-                <div>Pão de trigo</div>
-                <div>Maminha</div>
+            <div class="burguer-table-row" v-for="burguer in burgers" :key="burguer.id">
+                <div class="order-number">{{ burguer.id }}</div>
+                <div>{{ burguer.nome }}</div>
+                <div>{{ burguer.pao }}</div>
+                <div>{{ burguer.carne }}</div>
                 <div>
                     <ul>
-                        <li>Salame</li>
+                        <li v-for="(opcional, index) in burguer.opcionais">{{ opcional }}</li>
                         <li>Tomate</li>
                     </ul>
                 </div>
 
                 <div>
                     <select name="status" class="status">
-                        <option value="">Selecione o status do hamburguer</option>
+                        <option value="">Selecione</option>
                     </select>
                     <button class="btn-delete">Cancelar</button>
                 </div>
@@ -43,6 +43,18 @@ export default {
             status: []
         }
     },
+    methods: {
+        async getPedidos() {
+            const req = await fetch("http://localhost:3000/burgers")
+
+            const data = await req.json()
+
+            this.burgers = data;
+        }
+    },
+    mounted() {
+        this.getPedidos();
+    }
 }
 </script>
 <style scoped>

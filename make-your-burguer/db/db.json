@@ -116,6 +116,16 @@
         "Salame"
       ],
       "status": "Solicitado"
+    },
+    {
+      "id": "827c",
+      "nome": "teste",
+      "carne": "Integral",
+      "opcionais": [
+        "Bacon",
+        "Tomate"
+      ],
+      "status": "Solicitado"
     }
   ]
 }
